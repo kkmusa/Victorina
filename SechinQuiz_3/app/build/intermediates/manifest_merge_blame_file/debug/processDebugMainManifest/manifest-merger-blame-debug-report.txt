@@ -1,0 +1,128 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.sechinquiz"
+4    android:versionCode="1"
+5    android:versionName="0.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <permission
+11-->[androidx.core:core:1.13.1] /Users/musaakupov/.gradle/caches/8.9/transforms/3f4414e7258e46b34c51e68305e2ec6f/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.sechinquiz.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.13.1] /Users/musaakupov/.gradle/caches/8.9/transforms/3f4414e7258e46b34c51e68305e2ec6f/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.13.1] /Users/musaakupov/.gradle/caches/8.9/transforms/3f4414e7258e46b34c51e68305e2ec6f/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.sechinquiz.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.13.1] /Users/musaakupov/.gradle/caches/8.9/transforms/3f4414e7258e46b34c51e68305e2ec6f/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.13.1] /Users/musaakupov/.gradle/caches/8.9/transforms/3f4414e7258e46b34c51e68305e2ec6f/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:3:5-10:19
+18        android:allowBackup="true"
+18-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:3:18-44
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.13.1] /Users/musaakupov/.gradle/caches/8.9/transforms/3f4414e7258e46b34c51e68305e2ec6f/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="false"
+22        android:label="Кто хочет стать Сечиным?"
+22-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:3:45-85
+23        android:testOnly="true"
+24        android:theme="@style/Theme.SechinQuiz" >
+24-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:3:86-125
+25        <activity
+25-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:4:9-9:20
+26            android:name="com.example.sechinquiz.MainActivity"
+26-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:4:19-47
+27            android:exported="true"
+27-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:4:48-71
+28            android:screenOrientation="portrait" >
+28-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:4:72-108
+29            <intent-filter>
+29-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:5:13-8:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:6:17-68
+30-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:6:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:7:17-76
+32-->/Users/musaakupov/AndroidStudioProjects/SechinQuiz_3/app/src/main/AndroidManifest.xml:7:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/musaakupov/.gradle/caches/8.9/transforms/9e108e4fe202c9ad28301bfdcc9f8f87/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+36            android:name="androidx.compose.ui.tooling.PreviewActivity"
+36-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/musaakupov/.gradle/caches/8.9/transforms/9e108e4fe202c9ad28301bfdcc9f8f87/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+37            android:exported="true" />
+37-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/musaakupov/.gradle/caches/8.9/transforms/9e108e4fe202c9ad28301bfdcc9f8f87/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+38
+39        <provider
+39-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+40            android:name="androidx.startup.InitializationProvider"
+40-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+41            android:authorities="com.example.sechinquiz.androidx-startup"
+41-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+42            android:exported="false" >
+42-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+43            <meta-data
+43-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+44-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+45                android:value="androidx.startup" />
+45-->[androidx.emoji2:emoji2:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/faeb8e18292582c3bcc1961ab41d7c20/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+46            <meta-data
+46-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/musaakupov/.gradle/caches/8.9/transforms/ef3f1b8cf943e0590111f6b7a018d36f/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+47-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/musaakupov/.gradle/caches/8.9/transforms/ef3f1b8cf943e0590111f6b7a018d36f/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+48                android:value="androidx.startup" />
+48-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/musaakupov/.gradle/caches/8.9/transforms/ef3f1b8cf943e0590111f6b7a018d36f/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+49            <meta-data
+49-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+50                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+50-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+51                android:value="androidx.startup" />
+51-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+52        </provider>
+53
+54        <receiver
+54-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+55            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+55-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+56            android:directBootAware="false"
+56-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+57            android:enabled="true"
+57-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+58            android:exported="true"
+58-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+59            android:permission="android.permission.DUMP" >
+59-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+60            <intent-filter>
+60-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+61                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+61-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+61-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+62            </intent-filter>
+63            <intent-filter>
+63-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+64                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+64-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+64-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+65            </intent-filter>
+66            <intent-filter>
+66-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+67                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+67-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+67-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+68            </intent-filter>
+69            <intent-filter>
+69-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+70                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+70-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+70-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/musaakupov/.gradle/caches/8.9/transforms/5473644ba0bd49ef81962339d39248f6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+71            </intent-filter>
+72        </receiver>
+73    </application>
+74
+75</manifest>
