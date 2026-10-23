@@ -1,0 +1,38 @@
+name: Export approved final Tormenta MP4
+on:
+  push:
+    paths:
+      - '.github/workflows/tormenta-final-export.yml'
+permissions:
+  contents: write
+jobs:
+  export-final:
+    if: github.event.head_commit.message == 'Export approved final Tormenta MP4'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          sparse-checkout: |
+            tormenta-results/final-parts
+      - name: Decode this specific approved final video
+        run: |
+          python3 - <<'PY'
+          import pathlib, base64, hashlib
+          root = pathlib.Path('tormenta-results')
+          names = ["part-000.b64","part-001.b64","part-002.b64","part-003.b64","part-004.b64","part-005.b64","part-006.b64"]
+          encoded = ''.join((root / 'final-parts' / name).read_text().strip() for name in names)
+          data = base64.b64decode(encoded, validate=True)
+          if len(data) != 4581522 or hashlib.sha256(data).hexdigest() != 'c4abe243aff5e14f897f5a854d8ef905ac4a5d8feca76981b6338b179765d21c':
+              raise SystemExit('Final video checksum mismatch; refusing to publish another file')
+          (root / 'final_tormenta_couple.mp4').write_bytes(data)
+          PY
+      - name: Commit only final_tormenta_couple.mp4
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse -- tormenta-results/final_tormenta_couple.mp4
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish the approved 30.5-second Tormenta video"
+            git push
+          fi
