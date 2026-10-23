@@ -1,0 +1,42 @@
+name: Export approved preview MP4
+on:
+  push:
+    paths:
+      - '.github/workflows/tormenta-preview-export.yml'
+permissions:
+  contents: write
+jobs:
+  export-preview:
+    if: github.event.head_commit.message == 'Export approved Tormenta preview MP4'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          sparse-checkout: |
+            tormenta-results/tormenta_preview_download.html
+          sparse-checkout-cone-mode: false
+      - name: Decode this specific approved preview
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, pathlib, re
+          root = pathlib.Path('tormenta-results')
+          text = (root / 'tormenta_preview_download.html').read_text()
+          match = re.search(r'<video[^>]+src="data:video/mp4;base64,([^"]+)"', text)
+          if not match:
+              raise SystemExit('Preview missing')
+          data = base64.b64decode(match.group(1), validate=True)
+          expected = 'f3804bcf135fd6ac75a252294fc0211a2d914d38bb3a3e082c970cb104b0eba2'
+          if hashlib.sha256(data).hexdigest() != expected:
+              raise SystemExit('Preview checksum mismatch; refusing to publish another video')
+          (root / 'preview.mp4').write_bytes(data)
+          PY
+      - name: Commit only preview.mp4
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- tormenta-results/preview.mp4
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish the approved four-second preview.mp4"
+            git push
+          fi
